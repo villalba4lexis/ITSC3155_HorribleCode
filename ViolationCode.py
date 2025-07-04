@@ -1,3 +1,5 @@
+import random
+
 ## KISS - Keep It Simple, Stupid Model: Calculator
 class HorribleCalculator:
     def __init__(self, user_input_x_value, user_input_y_value):
@@ -120,4 +122,36 @@ class HorribleStudent:
             return "Ready to work."
         else:
             return "Not ready for job."
+
+## YAGNI - You Aren't Going to Need it
+class HorribleGame:
+    def __inti__(self, gameUserName):
+        self.gameUserName = gameUserName
+        self.gameProgressiveLevel = 0
+        self.gameRank = 'Bronze'
+        self.userIsPlaying = False
+        self.userIsOnline = False
+
+    def userRank(self):
+        if self.gameProgressiveLevel < 10:
+            self.gameRank = "Bronze"
+        elif self.gameProgressiveLevel < 20:
+            self.gameRank = "Silver"
+        elif self.gameProgressiveLevel < 30:
+            self.gameRank = "Gold"
+        else:
+            self.gameRank = "Diamond"
+
+    def ready_CompetativeMatchMaking(self):
+        if self.userIsPlaying and self.userIsOnline:
+            return True
+        else:
+            return False
+
+    ## Future Function, need more data and function to determine an actual report.
+    def generateInGameGiftReport(self):
+        print("️Marvel Rivals In-Game Gift Report:")
+        print(f" • Gift Volume of Hero Cosmetics: {random.randint(2000, 10000)} transactions")
+        print(f" • Most Gifted Hero Skin: {random.choice(['X-Revolution Emma Frost', 'Thunderbolts Winter Soldier', 'End Game Captain America', 'Twilight Duo'])}")
+
 
