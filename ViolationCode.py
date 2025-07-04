@@ -33,6 +33,7 @@ class HorribleCalculator:
             return
         else:
             return self.user_input_x_value / self.user_input_y_value
+# Violates KISS by using confusing naming, unnecessary checks, and incorrect attributes
 
 ## DRY - Don't Repeat Yourself
 class HorribleMusic:
@@ -95,6 +96,7 @@ class HorribleMusic:
             elif song == "Tomorrow - Distressor Ft. Wisp":
                 return "Tomorrow - Distressor Ft. Wisp is now playing."
         return "No song playing."
+# Violates DRY by repeating logic and hardcoding the playlist and conditions
 
 ## Single Responsibility
 # Student Class Main priority is to obtain data on student such as their name, age, id, and GPA
@@ -122,6 +124,7 @@ class HorribleStudent:
             return "Ready to work."
         else:
             return "Not ready for job."
+# Violates SRP by mixing academic logic with job-readiness assessment
 
 ## YAGNI - You Aren't Going to Need it
 class HorribleGame:
@@ -153,5 +156,6 @@ class HorribleGame:
         print("️Marvel Rivals In-Game Gift Report:")
         print(f" • Gift Volume of Hero Cosmetics: {random.randint(2000, 10000)} transactions")
         print(f" • Most Gifted Hero Skin: {random.choice(['X-Revolution Emma Frost', 'Thunderbolts Winter Soldier', 'End Game Captain America', 'Twilight Duo'])}")
+# Violates YAGNI by implementing a gift report feature that lacks supporting gameplay mechanics or context
 
 
