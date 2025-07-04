@@ -55,6 +55,31 @@ class Student:
     def calculateID(self):
         self.studentId = random.randint(111111, 1111111)
 
+## YAGNI - You Aren't Going to Need it
+class Game:
+    def __inti__(self, gameUserName):
+        self.gameUserName = gameUserName
+        self.gameProgressiveLevel = 0
+        self.gameRank = 'Bronze'
+        self.userIsPlaying = False
+        self.userIsOnline = False
+
+    def userRank(self):
+        if self.gameProgressiveLevel < 10:
+            self.gameRank = "Bronze"
+        elif self.gameProgressiveLevel < 20:
+            self.gameRank = "Silver"
+        elif self.gameProgressiveLevel < 30:
+            self.gameRank = "Gold"
+        else:
+            self.gameRank = "Diamond"
+
+    def ready_CompetativeMatchMaking(self):
+        if self.userIsPlaying and self.userIsOnline:
+            return True
+        else:
+            return False
+
 
 
 
