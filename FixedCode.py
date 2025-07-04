@@ -31,3 +31,10 @@ class Music:
         else:
             print(f"{song} is not in your available song list.")
 
+    def playMusic(self, song):
+        if song in self.songPlaylist:
+            print(f"{song} is playing.")
+        else:
+            print(f"{song} is not playing.")
+
+
