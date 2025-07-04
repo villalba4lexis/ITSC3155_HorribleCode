@@ -1,4 +1,5 @@
 import random
+
 ## KISS - Keep It Simple, Stupid Model: Calculator
 class Calculator:
     def __init__(self, input1, input2):
