@@ -93,3 +93,31 @@ class HorribleMusic:
             elif song == "Tomorrow - Distressor Ft. Wisp":
                 return "Tomorrow - Distressor Ft. Wisp is now playing."
         return "No song playing."
+
+## Single Responsibility
+# Student Class Main priority is to obtain data on student such as their name, age, id, and GPA
+class HorribleStudent:
+    def __init__(self, studentName, studentAge):
+        self.studentName = studentName
+        self.studentAge = studentAge
+        self.studentGPA = 0.0
+        self.studentID = 00000000
+
+    def calculateGPA(self, gradeList):
+        GPA = 0
+        for grade in gradeList:
+            GPA += grade
+        self.studentGPA = GPA / len(gradeList)
+
+    def calculateID(self):
+        self.studentId = random.randint(111111, 1111111)
+
+    # Too vague to determine if a student is ready for a job, should be its own entity to go more in depth.
+    def readyForJob(self):
+        if self.studentGPA > 3.0:
+            return "Might be ready for job."
+        elif self.studentAge >= 18:
+            return "Ready to work."
+        else:
+            return "Not ready for job."
+
