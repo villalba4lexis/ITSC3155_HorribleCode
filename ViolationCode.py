@@ -31,3 +31,65 @@ class HorribleCalculator:
             return
         else:
             return self.user_input_x_value / self.user_input_y_value
+
+## DRY - Don't Repeat Yourself
+class HorribleMusic:
+    def __init__(self, user, songList):
+        self.userMusic = user
+        self.songList = songList
+        self.songPlaylist = []
+    ## Some of my fav songs!
+    def createPlaylist(self):
+        self.songPlaylist.append("Genesis - Deftones")
+        self.songPlaylist.append("Covet - Basement")
+        self.songPlaylist.append("South - Quannnic")
+        self.songPlaylist.append("7 Words - Deftones")
+        self.songPlaylist.append("No One Noticed - The Marias")
+        self.songPlaylist.append("Heavy - The Marias")
+        self.songPlaylist.append("Future - Split Chain")
+        self.songPlaylist.append("Re-Extract - Split Chain Ft. Softcult")
+        self.songPlaylist.append("Tomorrow - Distressor Ft. Wisp")
+
+        for song in self.songPlaylist:
+            if song == "Genesis - Deftones":
+                return "Song Added to Playlist."
+            elif song == "Covet - Basement":
+                return "Song Added to Playlist."
+            elif song == "South - Quannnic":
+                return "Song Added to Playlist."
+            elif song == "7 Words - Deftones":
+                return "Song Added to Playlist."
+            elif song == "No One Noticed - The Marias":
+                return "Song Added to Playlist."
+            elif song == "Heavy - The Marias":
+                return "Song Added to Playlist."
+            elif song == "Future - Split Chain":
+                return "Song Added to Playlist."
+            elif song == "Re-Extract - Split Chain Ft. Softcult":
+                return "Song Added to Playlist."
+            elif song == "Tomorrow - Distressor Ft. Wisp":
+                return "Song Added to Playlist."
+            else:
+                return "Song Not in List, Add to List to add to Playlist."
+
+    def playMusic(self):
+        for song in self.songPlaylist:
+            if song == "Genesis - Deftones":
+                return "Genesis - Deftones is now playing."
+            elif song == "Covet - Basement":
+                return "Covet - Basement is now playing."
+            elif song == "South - Quannnic":
+                return "South - Quannnic is now playing."
+            elif song == "7 Words - Deftones":
+                return "7 Words - Deftones is now playing."
+            elif song == "No One Noticed - The Marias":
+                return "No One Noticed - The Marias is now playing."
+            elif song == "Heavy - The Marias":
+                return "Heavy - The Marias is now playing."
+            elif song == "Future - Split Chain":
+                return "Future - Split Chain is now playing."
+            elif song == "Re-Extract - Split Chain Ft. Softcult":
+                return "Re-Extract - Split Chain Ft. Softcult is now playing."
+            elif song == "Tomorrow - Distressor Ft. Wisp":
+                return "Tomorrow - Distressor Ft. Wisp is now playing."
+        return "No song playing."
