@@ -1,3 +1,4 @@
+import random
 ## KISS - Keep It Simple, Stupid Model: Calculator
 class Calculator:
     def __init__(self, input1, input2):
@@ -36,5 +37,25 @@ class Music:
             print(f"{song} is playing.")
         else:
             print(f"{song} is not playing.")
+
+## Single Responsibility
+class Student:
+    def __init__(self, studentName, studentAge):
+        self.studentName = studentName
+        self.studentAge = studentAge
+        self.studentGPA = 0.0
+        self.studentID = 00000000
+
+    def calculateGPA(self, gradeList):
+        GPA = 0
+        for grade in gradeList:
+            GPA += grade
+        self.studentGPA = GPA / len(gradeList)
+
+    def calculateID(self):
+        self.studentId = random.randint(111111, 1111111)
+
+
+
 
 
