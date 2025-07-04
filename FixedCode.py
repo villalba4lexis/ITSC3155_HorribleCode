@@ -18,3 +18,16 @@ class Calculator:
             return "ERROR. Division by Zero"
         return self.input1 / self.input2
 
+## DRY - Don't Repeat Yourself
+class Music:
+    def __init__(self, user, songList):
+        self.userMusic = user
+        self.songList = songList
+        self.songPlaylist = []
+
+    def createPlaylist(self, song):
+        if song in self.songList:
+            self.songPlaylist.append(song)
+        else:
+            print(f"{song} is not in your available song list.")
+
